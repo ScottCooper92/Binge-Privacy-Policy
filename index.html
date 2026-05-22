@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binge — Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e8e8e8;
+      --muted: #888;
+      --accent: #e50914;
+      --link: #c0a0ff;
+      --radius: 8px;
+      --max-w: 760px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .app-name {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .app-name span {
+      color: var(--accent);
+    }
+
+    header p {
+      margin-top: 0.4rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 2.5rem 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { margin-bottom: 0.9rem; }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    li { margin-bottom: 0.35rem; }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e2a1e;
+      color: #5dba5d;
+      border: 1px solid #2e4a2e;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .badge-neutral {
+      background: #1e1e2a;
+      color: #8888dd;
+      border-color: #2e2e4a;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 0.75rem 0 1rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      background: #222;
+      color: var(--muted);
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="app-name">Binge<span>.</span></div>
+      <p>Privacy Policy &mdash; Last updated May 22, 2026</p>
+    </header>
+
+    <p>
+      Binge is an Android app for browsing, discovering, and tracking movies and TV shows.
+      This policy explains what information is collected when you use Binge, how it is used,
+      and your choices regarding that information.
+    </p>
+
+    <h2>Information we collect</h2>
+
+    <div class="card">
+      <div class="card-title">What you do in the app</div>
+      <p style="margin-bottom:0">
+        Your search queries, ratings, watchlist additions, favorites, and any custom lists you create
+        are sent to <a href="https://www.themoviedb.org" rel="noopener">The Movie Database (TMDB)</a>
+        so they can be saved to your TMDB account and synced across devices. Binge does not operate
+        its own backend server — all account data lives with TMDB.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Stored locally on your device</div>
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>TMDB session &amp; account ID</td><td>Keeps you signed in between sessions</td></tr>
+          <tr><td>Recent searches (up to 8)</td><td>Powers the search history suggestions</td></tr>
+          <tr><td>Content &amp; UI preferences</td><td>Your chosen start tab, adult-content filter, analytics opt-in</td></tr>
+          <tr><td>Cached media data</td><td>Speeds up browsing by avoiding repeated network calls; auto-expires</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-bottom:0;color:var(--muted);font-size:0.875rem">
+        All local data is stored in Android DataStore and a Room database on your device.
+        Uninstalling the app removes all of it.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Crash reports <span class="badge-neutral badge">Firebase Crashlytics</span></div>
+      <p style="margin-bottom:0">
+        When the app crashes, an anonymised crash report (stack trace, device model, Android version,
+        app version) is sent to Google Firebase Crashlytics. This information is used solely to
+        identify and fix bugs. No personally identifiable information is included in crash reports.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        Usage analytics
+        <span class="badge">opt-out available</span>
+        <span class="badge-neutral badge">Firebase Analytics</span>
+      </div>
+      <p style="margin-bottom:0">
+        By default, anonymous usage events (screens viewed, features used) are collected via
+        Google Firebase Analytics to help understand how the app is used. You can disable this
+        at any time in <strong>Settings &rarr; Analytics</strong>. Disabling analytics stops all
+        future event collection; previously collected data is governed by
+        <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.
+      </p>
+    </div>
+
+    <h2>Third-party services</h2>
+    <p>Binge relies on the following third-party services. Each has its own privacy policy.</p>
+    <ul>
+      <li>
+        <strong>The Movie Database (TMDB)</strong> — provides all content and stores your account data.
+        <a href="https://www.themoviedb.org/privacy-policy" rel="noopener">TMDB Privacy Policy</a>
+      </li>
+      <li>
+        <strong>Google Firebase</strong> (Analytics, Crashlytics, Remote Config) — analytics, crash reporting,
+        and remote feature configuration.
+        <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>
+      </li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <p>Binge requests only the permissions it needs:</p>
+    <ul>
+      <li><strong>Internet</strong> — required to load content from TMDB and communicate with Firebase.</li>
+      <li><strong>Write external storage</strong> — required on Android 9 and below for image caching only.</li>
+    </ul>
+    <p>Binge does <em>not</em> request access to your camera, microphone, location, contacts, or any other sensitive data.</p>
+
+    <h2>Account sign-in</h2>
+    <p>
+      Binge does not have its own account system. Signing in means authorising Binge to access your
+      existing TMDB account via TMDB's OAuth flow. Your TMDB credentials are entered directly on the
+      TMDB website — Binge never sees your password. The resulting session token is stored locally on
+      your device and sent only to the TMDB API. You can revoke access at any time from your
+      <a href="https://www.themoviedb.org/settings/connected-applications" rel="noopener">TMDB connected applications settings</a>,
+      or by signing out inside the app.
+    </p>
+
+    <h2>Data retention and deletion</h2>
+    <ul>
+      <li>
+        <strong>Local data</strong> is deleted when you sign out or uninstall the app.
+      </li>
+      <li>
+        <strong>TMDB account data</strong> (watchlists, ratings, lists) can be managed and deleted
+        directly from your TMDB account settings.
+      </li>
+      <li>
+        <strong>Firebase Analytics &amp; Crashlytics</strong> data is retained per Google's policies.
+        Disabling analytics in the app prevents further collection.
+      </li>
+    </ul>
+
+    <h2>Children's privacy</h2>
+    <p>
+      Binge is not directed at children under 13. We do not knowingly collect personal information
+      from children under 13. If you believe a child under 13 has provided personal information
+      through the app, please contact us and we will take steps to remove it.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy changes materially, the updated version will be published at this URL with a
+      revised "last updated" date. Continued use of the app after a change constitutes acceptance
+      of the updated policy.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy? Email
+      <a href="mailto:scottalancooper@gmail.com">scottalancooper@gmail.com</a>.
+    </p>
+
+    <footer>
+      &copy; 2026 Scott Cooper &mdash; Binge
+    </footer>
+  </div>
+</body>
+</html>
