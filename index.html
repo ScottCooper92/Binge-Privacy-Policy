@@ -146,7 +146,7 @@
   <div class="container">
     <header>
       <div class="app-name">Binge<span>.</span></div>
-      <p>Privacy Policy &mdash; Last updated May 22, 2026</p>
+      <p>Privacy Policy &mdash; Last updated July 20, 2026</p>
     </header>
 
     <p>
@@ -200,13 +200,26 @@
         Usage analytics
         <span class="badge">opt-out available</span>
         <span class="badge-neutral badge">Firebase Analytics</span>
+        <span class="badge-neutral badge">PostHog</span>
       </div>
+      <p>
+        By default, anonymous usage events (screens viewed, features used) are collected to help
+        understand how the app is used. These events are sent to <strong>two</strong> analytics
+        providers: <strong>Google Firebase Analytics</strong> and <strong>PostHog</strong>, whose
+        servers are located in the <strong>European Union</strong>. The same events go to both.
+      </p>
+      <p>
+        These events record <em>that</em> something happened, not <em>what</em> it was. For example,
+        a search is recorded as "a search was performed" &mdash; your search terms are never included.
+        No event carries the titles you browse, your ratings, your lists, your TMDB username or
+        account ID, or any other information that identifies you.
+      </p>
       <p style="margin-bottom:0">
-        By default, anonymous usage events (screens viewed, features used) are collected via
-        Google Firebase Analytics to help understand how the app is used. You can disable this
-        at any time in <strong>Settings &rarr; Analytics</strong>. Disabling analytics stops all
-        future event collection; previously collected data is governed by
-        <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.
+        You can disable analytics at any time in <strong>Settings &rarr; Analytics</strong>. Turning
+        it off stops all future collection by <strong>both</strong> providers. Previously collected
+        data is governed by
+        <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a> and
+        <a href="https://posthog.com/privacy" rel="noopener">PostHog's privacy policy</a>.
       </p>
     </div>
 
@@ -222,12 +235,17 @@
         and remote feature configuration.
         <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>
       </li>
+      <li>
+        <strong>PostHog</strong> — product analytics, hosted in the European Union. Receives the same
+        anonymous usage events as Firebase Analytics, and only while analytics is enabled.
+        <a href="https://posthog.com/privacy" rel="noopener">PostHog Privacy Policy</a>
+      </li>
     </ul>
 
     <h2>Permissions</h2>
     <p>Binge requests only the permissions it needs:</p>
     <ul>
-      <li><strong>Internet</strong> — required to load content from TMDB and communicate with Firebase.</li>
+      <li><strong>Internet</strong> — required to load content from TMDB and communicate with the analytics and crash-reporting services listed above.</li>
       <li><strong>Write external storage</strong> — required on Android 9 and below for image caching only.</li>
     </ul>
     <p>Binge does <em>not</em> request access to your camera, microphone, location, contacts, or any other sensitive data.</p>
@@ -252,8 +270,9 @@
         directly from your TMDB account settings.
       </li>
       <li>
-        <strong>Firebase Analytics &amp; Crashlytics</strong> data is retained per Google's policies.
-        Disabling analytics in the app prevents further collection.
+        <strong>Firebase Analytics &amp; Crashlytics</strong> data is retained per Google's policies, and
+        <strong>PostHog</strong> data per PostHog's. Disabling analytics in the app prevents further
+        collection by both.
       </li>
     </ul>
 
