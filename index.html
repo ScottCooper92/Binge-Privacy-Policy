@@ -178,7 +178,7 @@
           <tr><td>Recent searches (up to 8)</td><td>Powers the search history suggestions</td></tr>
           <tr><td>Content &amp; UI preferences</td><td>Your chosen start tab, adult-content filter, analytics opt-in</td></tr>
           <tr><td>Cached media data</td><td>Speeds up browsing by avoiding repeated network calls; auto-expires</td></tr>
-          <tr><td>Connected server details <em>(optional)</em></td><td>If you connect Binge to your own media-request server: its address and your access key, stored encrypted. Only present if you set one up</td></tr>
+          <tr><td>Connected server details <em>(optional)</em></td><td>If you connect Binge to your own media-request server: your access key, stored encrypted, and the server's address, stored as you entered it. Only present if you set one up</td></tr>
         </tbody>
       </table>
       <p style="margin-bottom:0;color:var(--muted);font-size:0.875rem">
@@ -194,7 +194,8 @@
         <span class="badge-neutral badge">Firebase Crashlytics</span>
       </div>
       <p>
-        When the app crashes, a report is sent to Google Firebase Crashlytics so the bug can be found
+        When the app crashes &mdash; and when it hits an error it recovers from, such as a failed
+        network request &mdash; a report is sent to Google Firebase Crashlytics so the bug can be found
         and fixed. It contains the stack trace, your device model, Android version and app version,
         plus recent diagnostic log entries &mdash; which can include the name of the screen you were on
         and the address of a request that failed.
@@ -204,7 +205,7 @@
         generated identifier for your app installation, so repeated crashes on one device can be
         recognised as the same device &mdash; making them pseudonymous rather than anonymous. Unlike
         analytics, crash reporting is <strong>on by default</strong>; you can turn it off in
-        <strong>Settings &rarr; Send crash reports</strong>.
+        <strong>Account &rarr; Preferences &rarr; Send crash reports</strong>.
       </p>
     </div>
 
@@ -221,9 +222,12 @@
         actively agree &mdash; declining, or closing the app without choosing, leaves it off.
       </p>
       <p>
-        If you do agree, those events are sent to <strong>two</strong> analytics providers:
-        <strong>Google Firebase Analytics</strong> and <strong>PostHog</strong>, whose servers are
-        located in the <strong>European Union</strong>. The same events go to both.
+        If you do agree, the same events are sent to <strong>two</strong> analytics providers.
+        <strong>PostHog</strong> processes them on servers in the <strong>European Union</strong>.
+        <strong>Google Firebase Analytics</strong> is operated by Google, which processes data on its
+        own infrastructure outside the EEA under
+        <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a> and
+        terms.
       </p>
       <p>
         These events record <em>that</em> something happened, not <em>what</em> it was. For example,
@@ -239,7 +243,8 @@
         app, but it does mean the data is <em>pseudonymous</em> rather than anonymous.
       </p>
       <p style="margin-bottom:0">
-        You can disable analytics at any time in <strong>Settings &rarr; Analytics</strong>. Turning
+        You can disable analytics at any time in
+        <strong>Account &rarr; Preferences &rarr; Share analytics data</strong>. Turning
         it off stops all future collection by <strong>both</strong> providers. Previously collected
         data is governed by
         <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a> and
@@ -260,6 +265,11 @@
         <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>
       </li>
       <li>
+        <strong>Gravatar</strong> (Automattic) — serves your TMDB profile picture when you have one.
+        Loading it sends your device's IP address to Gravatar.
+        <a href="https://automattic.com/privacy/" rel="noopener">Automattic Privacy Policy</a>
+      </li>
+      <li>
         <strong>PostHog</strong> — product analytics, hosted in the European Union. Receives the same
         usage events as Firebase Analytics, and only while analytics is enabled.
         <a href="https://posthog.com/privacy" rel="noopener">PostHog Privacy Policy</a>
@@ -271,6 +281,10 @@
     <ul>
       <li><strong>Internet</strong> — required to load content from TMDB and communicate with the analytics and crash-reporting services listed above.</li>
       <li><strong>Write external storage</strong> — required on Android 9 and below for image caching only.</li>
+      <li>
+        <strong>Notifications</strong> — optional, and only requested if you connect a media-request
+        server and turn its notifications on. Binge never sends marketing notifications.
+      </li>
     </ul>
     <p>Binge does <em>not</em> request access to your camera, microphone, location, contacts, or any other sensitive data.</p>
 
