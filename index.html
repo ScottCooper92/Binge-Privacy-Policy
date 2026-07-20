@@ -178,6 +178,7 @@
           <tr><td>Recent searches (up to 8)</td><td>Powers the search history suggestions</td></tr>
           <tr><td>Content &amp; UI preferences</td><td>Your chosen start tab, adult-content filter, analytics opt-in</td></tr>
           <tr><td>Cached media data</td><td>Speeds up browsing by avoiding repeated network calls; auto-expires</td></tr>
+          <tr><td>Connected server details <em>(optional)</em></td><td>If you connect Binge to your own media-request server: its address and your access key, stored encrypted. Only present if you set one up</td></tr>
         </tbody>
       </table>
       <p style="margin-bottom:0;color:var(--muted);font-size:0.875rem">
@@ -187,11 +188,23 @@
     </div>
 
     <div class="card">
-      <div class="card-title">Crash reports <span class="badge-neutral badge">Firebase Crashlytics</span></div>
+      <div class="card-title">
+        Crash reports
+        <span class="badge">on by default</span>
+        <span class="badge-neutral badge">Firebase Crashlytics</span>
+      </div>
+      <p>
+        When the app crashes, a report is sent to Google Firebase Crashlytics so the bug can be found
+        and fixed. It contains the stack trace, your device model, Android version and app version,
+        plus recent diagnostic log entries &mdash; which can include the name of the screen you were on
+        and the address of a request that failed.
+      </p>
       <p style="margin-bottom:0">
-        When the app crashes, an anonymised crash report (stack trace, device model, Android version,
-        app version) is sent to Google Firebase Crashlytics. This information is used solely to
-        identify and fix bugs. No personally identifiable information is included in crash reports.
+        Reports are not linked to your TMDB account. Like usage analytics they carry a randomly
+        generated identifier for your app installation, so repeated crashes on one device can be
+        recognised as the same device &mdash; making them pseudonymous rather than anonymous. Unlike
+        analytics, crash reporting is <strong>on by default</strong>; you can turn it off in
+        <strong>Settings &rarr; Send crash reports</strong>.
       </p>
     </div>
 
@@ -274,7 +287,13 @@
     <h2>Data retention and deletion</h2>
     <ul>
       <li>
-        <strong>Local data</strong> is deleted when you sign out or uninstall the app.
+        <strong>Uninstalling the app</strong> removes all local data.
+      </li>
+      <li>
+        <strong>Signing out</strong> removes your TMDB session and the cached copies of your
+        watchlist, favourites, ratings and lists. It does <em>not</em> clear settings and history kept
+        on the device, such as your recent searches, chosen streaming services, and any connected
+        server details &mdash; those stay until you clear them individually or uninstall the app.
       </li>
       <li>
         <strong>TMDB account data</strong> (watchlists, ratings, lists) can be managed and deleted
