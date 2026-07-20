@@ -178,12 +178,13 @@
           <tr><td>Recent searches (up to 8)</td><td>Powers the search history suggestions</td></tr>
           <tr><td>Content &amp; UI preferences</td><td>Your chosen start tab, adult-content filter, analytics opt-in</td></tr>
           <tr><td>Cached media data</td><td>Speeds up browsing by avoiding repeated network calls; auto-expires</td></tr>
-          <tr><td>Connected server details <em>(optional)</em></td><td>If you connect Binge to your own media-request server: your access key, stored encrypted, and the server's address, stored as you entered it. Only present if you set one up</td></tr>
+          <tr><td>Connected server details <em>(optional)</em></td><td>If you connect Binge to your own media-request server: your access key or login session, stored encrypted, and the server's address, stored as you entered it. Only present if you set one up</td></tr>
         </tbody>
       </table>
       <p style="margin-bottom:0;color:var(--muted);font-size:0.875rem">
         All local data is stored in Android DataStore and a Room database on your device.
-        Uninstalling the app removes all of it.
+        Uninstalling the app removes all of it. Images you chose to save to your Pictures folder are
+        yours and stay where you put them.
       </p>
     </div>
 
@@ -280,7 +281,11 @@
     <p>Binge requests only the permissions it needs:</p>
     <ul>
       <li><strong>Internet</strong> — required to load content from TMDB and communicate with the analytics and crash-reporting services listed above.</li>
-      <li><strong>Write external storage</strong> — required on Android 9 and below for image caching only.</li>
+      <li>
+        <strong>Write external storage</strong> — required on Android 9 and below to save a poster or
+        backdrop into your device's Pictures folder, when you choose to save one. Binge's own image
+        cache is private to the app and doesn't use it.
+      </li>
       <li>
         <strong>Notifications</strong> — optional, and only requested if you connect a media-request
         server and turn its notifications on. Binge never sends marketing notifications.
@@ -297,11 +302,18 @@
       <a href="https://www.themoviedb.org/settings/connected-applications" rel="noopener">TMDB connected applications settings</a>,
       or by signing out inside the app.
     </p>
+    <p>
+      Connecting a media-request server is separate, and works differently: that server has its own
+      accounts, so you may enter its username or email and password directly in Binge. Those are sent
+      only to the server address you supplied &mdash; never to us, and never to any third party &mdash;
+      and only the resulting access key or login session is kept on your device, encrypted.
+    </p>
 
     <h2>Data retention and deletion</h2>
     <ul>
       <li>
-        <strong>Uninstalling the app</strong> removes all local data.
+        <strong>Uninstalling the app</strong> removes all local data, apart from any images you
+        deliberately saved to your Pictures folder.
       </li>
       <li>
         <strong>Signing out</strong> removes your TMDB session, your recent searches, and the cached
