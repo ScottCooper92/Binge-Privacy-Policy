@@ -204,9 +204,8 @@
       </div>
       <p>
         <strong>Analytics is off until you turn it on.</strong> During setup Binge asks whether you
-        want to share anonymous usage data (screens viewed, features used). Nothing is collected
-        unless you actively agree &mdash; declining, or closing the app without choosing, leaves it
-        off.
+        want to share usage data (screens viewed, features used). Nothing is collected unless you
+        actively agree &mdash; declining, or closing the app without choosing, leaves it off.
       </p>
       <p>
         If you do agree, those events are sent to <strong>two</strong> analytics providers:
@@ -216,8 +215,15 @@
       <p>
         These events record <em>that</em> something happened, not <em>what</em> it was. For example,
         a search is recorded as "a search was performed" &mdash; your search terms are never included.
-        No event carries the titles you browse, your ratings, your lists, your TMDB username or
-        account ID, or any other information that identifies you.
+        No event carries the titles you browse, your ratings, your lists, your TMDB username, or your
+        TMDB account ID.
+      </p>
+      <p>
+        They are <strong>not fully anonymous</strong>, and we would rather say so than overstate it.
+        Each provider attaches a randomly generated identifier for your app installation, and
+        receives your device's IP address, so events from the same device can be grouped together.
+        That identifier is not linked to your TMDB account and is discarded when you uninstall the
+        app, but it does mean the data is <em>pseudonymous</em> rather than anonymous.
       </p>
       <p style="margin-bottom:0">
         You can disable analytics at any time in <strong>Settings &rarr; Analytics</strong>. Turning
@@ -242,7 +248,7 @@
       </li>
       <li>
         <strong>PostHog</strong> — product analytics, hosted in the European Union. Receives the same
-        anonymous usage events as Firebase Analytics, and only while analytics is enabled.
+        usage events as Firebase Analytics, and only while analytics is enabled.
         <a href="https://posthog.com/privacy" rel="noopener">PostHog Privacy Policy</a>
       </li>
     </ul>
