@@ -146,7 +146,7 @@
   <div class="container">
     <header>
       <div class="app-name">Binge<span>.</span></div>
-      <p>Privacy Policy &mdash; Last updated July 28, 2026</p>
+      <p>Privacy Policy &mdash; Last updated August 27, 2026</p>
     </header>
 
     <p>
@@ -183,8 +183,26 @@
       </table>
       <p style="margin-bottom:0;color:var(--muted);font-size:0.875rem">
         All local data is stored in Android DataStore and a Room database on your device.
-        Uninstalling the app removes all of it. Images you chose to save to your Pictures folder are
-        yours and stay where you put them.
+        Uninstalling the app removes all of it, with one exception &mdash; the sign-in backup described
+        below. Images you chose to save to your Pictures folder are yours and stay where you put them.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        Restoring sign-in on a new device
+        <span class="badge-neutral badge">Google Block Store</span>
+      </div>
+      <p>
+        So you don't have to sign in again after switching phones, your TMDB sign-in can be restored
+        on a new device. Only the TMDB session token and account ID are backed up &mdash; through
+        <strong>Google Block Store</strong>, part of Google Play services &mdash; so Binge can sign you
+        back into your own TMDB account when you set up a new device or restore from a backup.
+      </p>
+      <p style="margin-bottom:0">
+        Your password is never involved &mdash; Binge never sees it. Google encrypts the backup, and
+        the session token is one you can revoke at any time from your TMDB settings.
+        <strong>Signing out of Binge deletes this backup.</strong>
       </p>
     </div>
 
@@ -265,8 +283,9 @@
         <a href="https://www.themoviedb.org/privacy-policy" rel="noopener">TMDB Privacy Policy</a>
       </li>
       <li>
-        <strong>Google Firebase</strong> (Analytics, Crashlytics, Remote Config) — analytics, crash reporting,
-        and remote feature configuration.
+        <strong>Google</strong> — Firebase (Analytics, Crashlytics, Remote Config) for analytics, crash
+        reporting and remote feature configuration, and Google Play services (Block Store) to back up
+        your sign-in for restore on a new device.
         <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>
       </li>
       <li>
@@ -302,7 +321,9 @@
       Binge does not have its own account system. Signing in means authorising Binge to access your
       existing TMDB account via TMDB's OAuth flow. Your TMDB credentials are entered directly on the
       TMDB website — Binge never sees your password. The resulting session token is stored locally on
-      your device and sent only to the TMDB API. You can revoke access at any time from your
+      your device and sent only to the TMDB API. It is also backed up through Google Block Store so your
+      sign-in can be restored on a new device, as described under &ldquo;Restoring sign-in on a new
+      device&rdquo; above. You can revoke access at any time from your
       <a href="https://www.themoviedb.org/settings/connected-applications" rel="noopener">TMDB connected applications settings</a>,
       or by signing out inside the app.
     </p>
@@ -317,11 +338,13 @@
     <ul>
       <li>
         <strong>Uninstalling the app</strong> removes all local data, apart from any images you
-        deliberately saved to your Pictures folder.
+        deliberately saved to your Pictures folder. The cross-device sign-in backup is held by Google
+        Play services rather than the app, so to remove it, sign out first (or delete your device
+        backup from your Google account).
       </li>
       <li>
-        <strong>Signing out</strong> removes your TMDB session, your recent searches, and the cached
-        copies of your watchlist, favourites, ratings and lists. It does <em>not</em> clear settings
+        <strong>Signing out</strong> removes your TMDB session, the cross-device sign-in backup, your
+        recent searches, and the cached copies of your watchlist, favourites, ratings and lists. It does <em>not</em> clear settings
         kept on the device, such as your chosen streaming services, default tab, and any connected
         server details &mdash; those stay until you change them or uninstall the app.
       </li>
