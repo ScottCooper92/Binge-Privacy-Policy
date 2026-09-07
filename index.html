@@ -146,7 +146,7 @@
   <div class="container">
     <header>
       <div class="app-name">Binge<span>.</span></div>
-      <p>Privacy Policy &mdash; Last updated August 27, 2026</p>
+      <p>Privacy Policy &mdash; Last updated September 7, 2026</p>
     </header>
 
     <p>
@@ -175,7 +175,7 @@
         </thead>
         <tbody>
           <tr><td>TMDB session &amp; account ID</td><td>Keeps you signed in between sessions</td></tr>
-          <tr><td>Recent searches (up to 8)</td><td>Powers the search history suggestions</td></tr>
+          <tr><td>Recent searches (up to 10)</td><td>Powers the search history suggestions</td></tr>
           <tr><td>Content &amp; UI preferences</td><td>Your chosen start tab, adult-content filter, analytics opt-in</td></tr>
           <tr><td>Cached media data</td><td>Speeds up browsing by avoiding repeated network calls; auto-expires</td></tr>
           <tr><td>Connected server details <em>(optional)</em></td><td>If you connect Binge to your own media-request server: your access key or login session, stored encrypted, and the server's address, stored as you entered it. Only present if you set one up</td></tr>
@@ -256,11 +256,13 @@
       </p>
       <p>
         They are <strong>not fully anonymous</strong>, and we would rather say so than overstate it.
-        Each provider attaches a randomly generated identifier for your app installation, and
-        receives your device's IP address, so events from the same device can be grouped together.
-        From that IP address the providers also infer your <strong>approximate location</strong> and
-        store it alongside each event &mdash; typically your country and region, and in some cases
-        down to a city or approximate coordinates. This is an estimate derived from the IP address,
+        Each provider attaches a randomly generated identifier for your app installation, and it
+        is that identifier &mdash; not your IP address &mdash; that links events from the same device
+        together. Your device's IP address does reach each provider with the request, and is used to
+        infer your <strong>approximate location</strong>, which is stored alongside each event
+        &mdash; typically your country and region, and in some cases down to a city or approximate
+        coordinates. PostHog is configured to discard the IP address itself once that location has
+        been derived. This is an estimate derived from the IP address,
         not your device's GPS: Binge never requests location permission and never sends your precise
         location. That identifier is not linked to your TMDB account and is discarded when you
         uninstall the app, but it does mean the data is <em>pseudonymous</em> rather than anonymous.
