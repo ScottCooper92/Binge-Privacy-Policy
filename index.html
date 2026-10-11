@@ -201,8 +201,10 @@
       </p>
       <p>
         <strong>The cloud backup is made only on a device with a screen lock set.</strong> It is
-        end-to-end encrypted, so Google cannot read it. Without a screen lock, your sign-in stays on
-        the device, nothing is sent to the cloud, and it will not be restored on a new device.
+        end-to-end encrypted, so Google cannot read it. Without a screen lock, nothing is sent to the
+        cloud. Your sign-in is still copied to a new phone if you move across with a direct
+        device-to-device transfer, such as a cable or phone-to-phone setup, which does not go through
+        the cloud.
       </p>
       <p style="margin-bottom:0">
         Your password is never involved &mdash; Binge never sees it. The session token is one you can
@@ -292,7 +294,8 @@
       <li>
         <strong>Google</strong> — Firebase (Analytics, Crashlytics, Remote Config) for analytics, crash
         reporting and remote feature configuration, and Google Play services (Block Store) to back up
-        your sign-in for restore on a new device, on devices with a screen lock set.
+        your sign-in for restore on a new device. The cloud backup is made only on devices with a screen lock
+        set; a direct device-to-device transfer carries the sign-in either way.
         <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>
       </li>
       <li>
@@ -330,7 +333,8 @@
       TMDB website — Binge never sees your password. The resulting session token is stored locally on
       your device and sent only to the TMDB API. On a device with a screen lock set, it is also backed up
       (end-to-end encrypted) through Google Block Store so your sign-in can be restored on a new
-      device; without a screen lock it stays on the device and is not restored. See
+      device. Without a screen lock nothing is sent to the cloud, but a direct device-to-device
+      transfer to a new phone still carries it. See
       &ldquo;Restoring sign-in on a new device&rdquo; above. You can revoke access at any time from your
       <a href="https://www.themoviedb.org/settings/connected-applications" rel="noopener">TMDB connected applications settings</a>,
       or by signing out inside the app.
@@ -430,7 +434,7 @@
     <ul>
       <li>
         <strong>Uninstalling the app</strong> removes all local data, apart from any images you
-        deliberately saved to your Pictures folder. Where a cross-device sign-in backup was made (only on
+        deliberately saved to your Pictures folder. Where a cloud sign-in backup was made (only on
         devices with a screen lock set), it is held by Google
         Play services rather than the app, so to remove it, sign out first (or delete your device
         backup from your Google account).
